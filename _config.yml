@@ -64,12 +64,12 @@ disqus-shortname: "personal-jekyll-theme"
 ############
 
 events:
-  - image: "/img/timeline/mcefeeline.jpg"
+  - image: "/img/timeline/benevocats.png"
     date: "December 2021 - Today"
     description: "Finally, I landed in the online travel world, helping people 
     jet off to far-flung places. Four years later, I’m still happily coding my 
     way around the globe—one booking at a time!"
-  - image: "/img/timeline/securitocat.jpg"
+  - image: "/img/timeline/securitocat.png"
     date: "October 2020 - November 2021"
     description: "Seeking stability (and fewer coffee mugs), I joined a 
     bank as a senior engineer. Despite the mountains of paperwork, I found 
@@ -80,7 +80,7 @@ events:
     to the moon—until the bills piled up faster than my pull requests. 
     It went bankrupt, but I walked away with a story to tell and an 
     impressive coffee mug collection!"
-  - image: "/img/timeline/mona-the-rivetertocat.jpg"
+  - image: "/img/timeline/mona-the-rivetertocat.png"
     date: "January 2019 - November 2019"
     description: "I moved on to public sector projects and discovered 
     that bureaucracy can outsmart even the cleanest code. At least 
