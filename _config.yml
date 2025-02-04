@@ -64,11 +64,35 @@ disqus-shortname: "personal-jekyll-theme"
 ############
 
 events:
+  - image: "/img/timeline/benevocats.png"
+    date: "December 2021 - Today"
+    description: "Finally, I landed in the online travel world, helping people 
+    jet off to far-flung places. Four years later, I’m still happily coding my 
+    way around the globe—one booking at a time!"
+  - image: "/img/timeline/securitocat.jpg"
+    date: "October 2020 - November 2021"
+    description: "Seeking stability (and fewer coffee mugs), I joined a 
+    bank as a senior engineer. Despite the mountains of paperwork, I found 
+    creativity sometimes flourishes best under 24/7 audits."
+  - image: "/img/timeline/fintechtocat.png"
+    date: "November 2019 - August 2020"
+    description: "I jumped into fintech, fully expecting a rocket ship 
+    to the moon—until the bills piled up faster than my pull requests. 
+    It went bankrupt, but I walked away with a story to tell and an 
+    impressive coffee mug collection!"
+  - image: "/img/timeline/mona-the-rivetertocat.jpg"
+    date: "January 2019 - November 2019"
+    description: "I moved on to public sector projects and discovered 
+    that bureaucracy can outsmart even the cleanest code. At least 
+    I became a pro at coding through red tape!"
   - image: "/img/timeline/spidertocat.png"
-    date: "September 2013 - Today"
-    description: "Saving the neighborhood!"
+    date: "June 2016 - December 2018"
+    description: " I started as a wide-eyed junior in telecom, 
+    convinced my code would save the world. Reality hit when I 
+    realized debugging was harder than deciphering alien 
+    signals—but hey, it was fun!"
   - image: "/img/timeline/baracktocat.jpg"
-    date: "September 2007 - August 2013"
+    date: "September 2009 - September 2015"
     description: "Started coding"
 
 # First image of the Timeline
@@ -92,7 +116,7 @@ pgp: False
 # if the author_blurb is not set, then this feature is skipped
 author_blurb:
   "Marios Gavriil is an awesome person. He lives between Jigglypuffs and Deadpools figures and loves unicorns. 
-   In his spare time, likes composing music"
+   In his spare time composing music or experimenting new recipes in the kitchen"
 author_blurb_image: "/img/author.png"
 
 ##################
@@ -106,8 +130,8 @@ social:
     url: "https://www.linkedin.com/in/marios-gavriil"
   - icon: "soundcloud"
     url: "https://soundcloud.com/marios-denleo"
-#  - icon: "rss"
-#    url: "https://le4ker.github.io/personal-jekyll-theme/feed.xml"
+  - icon: "rss"
+    url: "https://mikopos.github.io/feed.xml"
 
 # NB! Tread carefully if you want to change the variables below this point!
 

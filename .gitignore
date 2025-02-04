@@ -6,3 +6,5 @@
 # Jekyll
 _site/
 .jekyll-cache/
+.idea
+.github
