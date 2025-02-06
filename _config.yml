@@ -53,11 +53,11 @@ twitter-share: True
 linkedin-share: True
 reddit-share: True
 tumblr-share: True
-pinterest-share: True
+pinterest-share: False
 pocket-share: True
-vkontakte-share: True
+vkontakte-share: False
 
-disqus-shortname: "personal-jekyll-theme"
+disqus-shortname:
 
 ############
 # Timeline #
