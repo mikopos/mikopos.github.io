@@ -126,12 +126,16 @@ author_blurb_image: "/img/author.png"
 social:
   - icon: "github"
     url: "https://github.com/mikopos"
+    page: "Github"
   - icon: "linkedin-in"
     url: "https://www.linkedin.com/in/marios-gavriil"
+    page: "LinkedIn"
   - icon: "soundcloud"
     url: "https://soundcloud.com/marios-denleo"
+    page: "SoundCloud"
   - icon: "rss"
     url: "https://mikopos.github.io/feed.xml"
+    page: "RSS"
 
 # NB! Tread carefully if you want to change the variables below this point!
 
