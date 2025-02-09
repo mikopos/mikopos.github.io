@@ -49,6 +49,7 @@
     type="text/javascript"
     src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
     charset="UTF-8"
+    defer
   ></script>
   <script type="text/javascript" charset="UTF-8">
     document.addEventListener("DOMContentLoaded", function () {
@@ -62,7 +63,7 @@
         preferences_center_close_button_hide: false,
         page_refresh_confirmation_buttons: false,
         website_name: "{{ site.url }}",
-      }, 2000);
+      }, 500);
     });
   </script>
 
