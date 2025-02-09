@@ -6,7 +6,7 @@
   </div>
   <a href="#{{ site.pages_list['About'] }}" class="page-scroll" aria-label="Visit my About me section">
     {% if site.me-img contains "https://" %}
-    <img class="img-me" src="{{ site.me-img }}" alt="" />
+    <img class="img-me" src="{{ site.me-img }}" alt="" fetchpriority="high" />
     {% else %}
     <img
       class="img-me"
