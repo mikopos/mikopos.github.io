@@ -7,7 +7,7 @@
   <div class="row justify-content-center">
     <div class="col-md-10 col-12">
       {{ page.content | markdownify }} {% assign post = site.posts.first %}
-      <h4 class="pt-5">
+      <h3 class="pt-5">
         {{ post.date | date_to_string }}
         <small>
           .
@@ -21,7 +21,7 @@
         </small>
         <a href="{{site.url}}/{{ post.url }}">{{ post.title }}</a>
         <small> <a href="{{site.url}}/{{ post.url }}#disqus_thread">Comments</a></small>
-      </h4>
+      </h3>
 
       <section class="text-justify">
         {{ post.content | strip_html | truncatewords: site.post-preview-words |
