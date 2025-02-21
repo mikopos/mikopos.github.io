@@ -36,12 +36,12 @@ Let’s get real—life isn’t always perfect, and neither are networks or devi
 Picture this: you’re using a mobile banking app, and you tap “transfer funds.” Due to a network glitch, you’re not sure if the money moved. In a non-idempotent system, if you press “transfer” again, you might end up sending the money twice. That’s a recipe for disaster! But with idempotency, the app can detect that the transfer has already been processed, and no extra funds are sent out—saving you from an embarrassing bank call later.
 
 ### Guarding Against Network Gremlins
-![Guarding against network Gremlins](./img/posts/gremlin.png =300x300)
+![Guarding against network Gremlins](/img/posts/gremlin.png =300x300)
 
 We all know that networks can be unpredictable. A brief lag here or an unexpected timeout there can cause your API to receive the same request multiple times. Idempotency acts like a safety net, ensuring that even if the same message lands on your server more than once, the effect remains as if it were received a single time.
 
 ### Keeping Distributed Systems in Sync
-![Keeping distributed system in sync](./img/posts/sync.png =300x300)
+![Keeping distributed system in sync](/img/posts/sync.png =300x300)
 
 In today’s tech landscape, many systems aren’t built on a single server—they’re spread out over multiple machines and even across different data centers. In such distributed systems, making sure that every node is on the same page is a tall order. By designing your API endpoints to be idempotent, you make sure that even if two nodes receive the same command, the end state of your system remains consistent.
 
@@ -139,18 +139,14 @@ Beyond the main strategies we’ve discussed, there are a few other tricks you c
 Let’s bring this all together with some real-world scenarios. How exactly does idempotency help in everyday applications?
 
 ### Payment Processing
-![Payment Processing](./img/posts/payment.png =300x300)
 
 Imagine you’re using an online payment system. You click “pay” and the system processes your payment—but due to a temporary glitch, the response never makes it back to you. You click “pay” again. In a non-idempotent system, this could lead to your card being charged twice! With idempotency, the system recognizes that the same payment request is being made, and only one transaction is processed. This not only saves you from financial headaches but also builds trust in the service.
 
 ### Order Management
-![Order Management](./img/posts/order.png =300x300)
 
 In the bustling world of e-commerce, duplicate orders can be a nightmare. Let’s say a customer’s internet connection is spotty, and they accidentally submit an order twice. An idempotent API can detect the duplicate order—perhaps using a unique order key or transaction ID—and ensure that the order is processed only once. This helps avoid inventory issues and customer complaints, keeping the shopping experience smooth and enjoyable.
 
 ### Microservices and Distributed Systems
-![Microservices and Distributed Systems](./img/posts/microservices.png =300x300)
-
 Modern applications often consist of multiple microservices that communicate asynchronously. For example, when an order is placed, one service might handle the payment while another takes care of shipping. If one service sends a message multiple times due to a retry mechanism, idempotency ensures that downstream services process that message just once. This is crucial for maintaining consistency and reliability in a distributed system where messages can be delayed, duplicated, or even lost.
 
 ---
