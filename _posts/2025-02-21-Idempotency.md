@@ -36,12 +36,10 @@ Let’s get real—life isn’t always perfect, and neither are networks or devi
 Picture this: you’re using a mobile banking app, and you tap “transfer funds.” Due to a network glitch, you’re not sure if the money moved. In a non-idempotent system, if you press “transfer” again, you might end up sending the money twice. That’s a recipe for disaster! But with idempotency, the app can detect that the transfer has already been processed, and no extra funds are sent out—saving you from an embarrassing bank call later.
 
 ### Guarding Against Network Gremlins
-![Guarding against network Gremlins](/img/posts/gremlin.png =300x300)
 
 We all know that networks can be unpredictable. A brief lag here or an unexpected timeout there can cause your API to receive the same request multiple times. Idempotency acts like a safety net, ensuring that even if the same message lands on your server more than once, the effect remains as if it were received a single time.
 
 ### Keeping Distributed Systems in Sync
-![Keeping distributed system in sync](/img/posts/sync.png =300x300)
 
 In today’s tech landscape, many systems aren’t built on a single server—they’re spread out over multiple machines and even across different data centers. In such distributed systems, making sure that every node is on the same page is a tall order. By designing your API endpoints to be idempotent, you make sure that even if two nodes receive the same command, the end state of your system remains consistent.
 
