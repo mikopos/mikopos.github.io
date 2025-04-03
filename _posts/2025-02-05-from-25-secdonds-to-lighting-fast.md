@@ -54,13 +54,13 @@ We employed an aggregator pipeline of this form:
 ```javascript
 db.users.aggregate([
   { "$match": { "$and": [...] } },
-  { "$sort": { "date.dateTime": -1 } },
+  { "$sort": { "date": -1 } },
   { "$skip": 0 },
   { "$limit": 50 }
 ]).explain("executionStats");
 ```
 
-Although it looked straightforward—especially given that `date.dateTime` was indexed—
+Although it looked straightforward—especially given that `date` was indexed—
 `explain("executionStats")` painted a different picture:
 
 ```json
@@ -70,7 +70,7 @@ Although it looked straightforward—especially given that `date.dateTime` was i
 ```
 
 At almost 51 seconds, the pipeline scanned thousands of documents, applying a sort in memory, and 
-then skipped to the relevant offset. This indicated that the index on `date.dateTime` alone was 
+then skipped to the relevant offset. This indicated that the index on `date` alone was 
 insufficient or mismatched.
 
 ### Lesson #1
@@ -94,12 +94,12 @@ A multi-field index is invaluable if you filter or sort on multiple fields. For 
 
 ```javascript
 db.users.createIndex(
-  { "userId": 1, "status": 1, "date.dateTime": -1 },
-  { name: "userId_status_date.dateTime_1" }
+  { "userId": 1, "status": 1, "date.": -1 },
+  { name: "userId_status_date_1" }
 );
 ```
 
-By aligning the fields used for filtering (`userId`, `status`) and sorting (`date.dateTime`), you can vastly improve performance.
+By aligning the fields used for filtering (`userId`, `status`) and sorting (`date`), you can vastly improve performance.
 
 ---
 
@@ -227,12 +227,12 @@ platform threads.
 Ultimately, the following methods converged into our cohesive fix:
 
 1. **Compound Index**
-    - Incorporates all filter fields (`userId`, `status`) plus the sort field (`date.dateTime`).
+    - Incorporates all filter fields (`userId`, `status`) plus the sort field (`date`).
     - Example:
       ```javascript
       db.users.createIndex(
-        { "userId": 1, "status": 1, "sdate.dateTime": -1 },
-        { name: "userId_status_date.dateTime_1" }
+        { "userId": 1, "status": 1, "date": -1 },
+        { name: "userId_status_date_-1" }
       );
       ```
 
@@ -283,7 +283,7 @@ indexed. A suitable compound index and an efficient pipeline can drastically enh
    Illustrate where MongoDB might do an `IXSCAN` or `COLLSCAN`.
 
 2. **Compound Index**
-   Demonstrate how `(userId, status, date.dateTime)` in one index covers both filtering and sorting.
+   Demonstrate how `(userId, status, date)` in one index covers both filtering and sorting.
 
 3. **Virtual Threads**
    Sketch how multiple I/O-blocking tasks fit on a small pool of OS threads when using Loom.
