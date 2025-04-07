@@ -26,17 +26,7 @@ background-img: "intro-bg.jpg"
 # Dynamic Text on the Header #
 ##############################
 
-# quote: "C'est ma vie ... "
-quote: >
-  <div class="promo-banner" style="background: url('/assets/images/conn2025-bg.jpg') no-repeat center center; background-size: cover; padding: 40px; text-align: center; color: #fff;">
-    <h1 style="font-size: 3em; margin-bottom: 20px;">Conn 2025 Lighting Talk</h1>
-    <p style="font-size: 1.2em; margin-bottom: 30px;">
-      Join me in London for an inspiring talk on the latest lighting innovations!
-    </p>
-    <a href="/talk-details" style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0.6); color: #fff; text-decoration: none; font-weight: bold; border-radius: 5px;">
-      Learn More
-    </a>
-  </div>
+quote: "C'est ma vie ... "
 me-img: "/img/jetpacktocat.png"
 
 # To use github profile pic uncomment the following line and replace 'user_name'
