@@ -26,19 +26,7 @@ background-img: "intro-bg.jpg"
 # Dynamic Text on the Header #
 ##############################
 
-# quote: "C'est ma vie ... "
-quote: "🌟 Exciting News! 🌟
-
-I’m thrilled to announce I’ll be delivering a lightning talk at QCon 2025 in London! ⚡
-
-Join me to explore cutting-edge insights, connect with industry leaders, and ignite powerful conversations.
-
-📅 When: Wednesday 9th April
-📍 Where: QCon London 2025
-🎤 Topic: From 50 seconds query to lightning fast
-
-Looking forward to seeing you there! Let’s connect if you’ll be attending."
-me-img: "/img/jetpacktocat.png"
+quote: "C'est ma vie ... "
 
 # To use github profile pic uncomment the following line and replace 'user_name'
 # with your github user name.
